@@ -1,0 +1,28 @@
+tablero= [[0,1,0],[0,0,1],[2,2,0]]
+
+def genera(num_f, num_c, valor):
+    return[[valor for c in range(0, num_c)] for f in range(0, num_f)]
+juego_tres_en_raya=genera(3,3,0)
+
+def imprime(juego_tres_en_raya):
+    juego_tres_en_raya[0][1]=1
+    juego_tres_en_raya[1][2]=1
+    juego_tres_en_raya[0][2]=2
+    juego_tres_en_raya[2][1]=2
+    return juego_tres_en_raya
+tres_en_raya = imprime(juego_tres_en_raya)
+
+def mostrar(tres_en_raya):
+    print("---------------------------")
+    print("|", tres_en_raya[0][0] ,"|", tres_en_raya[0][1] ,"|", tres_en_raya[0][2])
+    print("---------------------------")
+    print("|", tres_en_raya[1][0] ,"|", tres_en_raya[1][1] ,"|", tres_en_raya[1][2])
+    print("---------------------------")
+    print("|", tres_en_raya[2][0] ,"|", tres_en_raya[2][1] ,"|", tres_en_raya[2][2])
+    print("---------------------------")
+def empezar(juego):
+    for i in juego:
+        for c in i:
+            
+            c= c+1
+        
